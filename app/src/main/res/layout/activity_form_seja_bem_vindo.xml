@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".FormSejaBemVindo">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="340dp"
+        android:layout_height="417dp"
+        android:layout_marginTop="40dp"
+        android:text="O Que o FarmaExpress Oferece?&#xA;✨ Autoatendimento Rápido: Gerencie suas necessidades facilmente, explorando nosso catálogo e completando suas compras com alguns toques.&#xA;✨ Cadastro Rápido: Crie e gerencie seu perfil em minutos para um atendimento personalizado.&#xA;✨ Agendamento de Retirada: Agende a retirada dos seus produtos na data e horário que preferir, sem filas.&#xA;✨ Notificações e Ofertas: Receba as últimas novidades e promoções diretamente no seu celular.&#xA;Estamos comprometidos em oferecer um serviço de alta qualidade e uma experiência conveniente. Qualquer dúvida ou sugestão, nossa equipe está à disposição para ajudar!&#xA;Agradecemos por escolher o FarmaExpress. Vamos começar sua jornada para um atendimento farmacêutico mais eficiente e conveniente!&#xA;"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="363dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="56dp"
+        android:text="Bem-vindo ao FarmaExpress  O Futuro da Farmácia ao Seu Alcance!"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_tela_vamos"
+        android:layout_width="127dp"
+        android:layout_height="56dp"
+        android:text="Vamos lá!"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
