@@ -40,7 +40,7 @@ public class FormLogin extends AppCompatActivity {
 
         IniciarTelaPrincipal();
 
-        bt_entrar.setOnClickListener(new View.OnClickListener() {
+         bt_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

@@ -1,37 +1,42 @@
-package com.example.farmciaaplicativo.ui.slideshow;
+package com.example.farmciaaplicativo.ui.slideshow
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import com.example.farmciaaplicativo.databinding.FragmentSlideshowBinding
 
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
+class SlideshowFragment : Fragment() {
 
-import com.example.farmciaaplicativo.databinding.FragmentSlideshowBinding;
+    private var _binding: FragmentSlideshowBinding? = null
 
-public class SlideshowFragment extends Fragment {
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
 
-    private FragmentSlideshowBinding binding;
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        val slideshowViewModel =
+            ViewModelProvider(this).get(SlideshowViewModel::class.java)
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        SlideshowViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
+        val root: View = binding.root
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        final TextView textView = binding.textSlideshow;
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        return root;
+        val textView: TextView = binding.textSlideshow
+        slideshowViewModel.text.observe(viewLifecycleOwner) {
+            textView.text = it
+        }
+        return root
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

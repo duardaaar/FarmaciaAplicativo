@@ -1,19 +1,13 @@
-package com.example.farmciaaplicativo.ui.slideshow;
+package com.example.farmciaaplicativo.ui.slideshow
 
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 
-public class SlideshowViewModel extends ViewModel {
+class SlideshowViewModel : ViewModel() {
 
-    private final MutableLiveData<String> mText;
-
-    public SlideshowViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+    private val _text = MutableLiveData<String>().apply {
+        value = "This is slideshow Fragment"
     }
-
-    public LiveData<String> getText() {
-        return mText;
-    }
+    val text: LiveData<String> = _text
 }

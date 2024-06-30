@@ -1,37 +1,42 @@
-package com.example.farmciaaplicativo.ui.gallery;
+package com.example.farmciaaplicativo.ui.gallery
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import com.example.farmciaaplicativo.databinding.FragmentGalleryBinding
 
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
+class GalleryFragment : Fragment() {
 
-import com.example.farmciaaplicativo.databinding.FragmentGalleryBinding;
+    private var _binding: FragmentGalleryBinding? = null
 
-public class GalleryFragment extends Fragment {
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
 
-    private FragmentGalleryBinding binding;
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        val galleryViewModel =
+            ViewModelProvider(this).get(GalleryViewModel::class.java)
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        GalleryViewModel galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        val root: View = binding.root
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        final TextView textView = binding.textGallery;
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        return root;
+        val textView: TextView = binding.textGallery
+        galleryViewModel.text.observe(viewLifecycleOwner) {
+            textView.text = it
+        }
+        return root
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
