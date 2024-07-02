@@ -38,13 +38,13 @@ public class FormLogin extends AppCompatActivity {
             }
         });
 
-        IniciarTelaPrincipal();
+        IniciarTelaInicial();
 
          bt_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(FormLogin.this,FormTelaInicial.class);
+                Intent intent = new Intent(FormLogin.this,TelaInicial.class);
                 startActivity(intent);
             }
         });
@@ -54,7 +54,7 @@ public class FormLogin extends AppCompatActivity {
         text_tela_cadastro = findViewById(R.id.text_tela_cadastro);
     }
 
-    private void IniciarTelaPrincipal(){
+    private void IniciarTelaInicial(){
         bt_entrar = findViewById(R.id.bt_entrar);
     }
 

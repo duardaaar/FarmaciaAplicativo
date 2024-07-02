@@ -39,6 +39,12 @@
         <item name="android:background">@drawable/button</item>
     </style>
 
+    <style name="Home_Navigator">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/purple_dark</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
 
 
 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/baseline_app_registration_24"
+        android:id="@+id/navCadast"
+        android:title="Cadastro" />
+
+    <item
+        android:icon="@drawable/baseline_group_24"
+        android:id="@+id/navClientes"
+        android:title="Clientes" />
+
+    <item
+        android:icon="@drawable/baseline_calendar_month_24"
+        android:id="@+id/navAgendamentos"
+        android:title="Agendamentos" />
+
+    <item
+        android:icon="@drawable/baseline_favorite_24"
+        android:id="@+id/navProgramaMilhas"
+        android:title="Programa Milhas" />
+
+    <item
+        android:icon="@drawable/baseline_rocket_launch_24"
+        android:id="@+id/navMissao"
+        android:title="Missão" />
+
+    <item
+        android:icon="@drawable/baseline_info_24"
+        android:id="@+id/navSobre"
+        android:title="Sobre" />
+
+</menu>
