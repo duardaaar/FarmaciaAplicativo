@@ -37,10 +37,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_tela_vamos"
-        android:layout_width="127dp"
-        android:layout_height="56dp"
+        style="@style/Button"
+        android:layout_width="148dp"
+        android:layout_height="64dp"
         android:text="Vamos lá!"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

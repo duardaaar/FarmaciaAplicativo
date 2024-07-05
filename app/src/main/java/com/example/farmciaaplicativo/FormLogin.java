@@ -44,7 +44,7 @@ public class FormLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(FormLogin.this,TelaInicial.class);
+                Intent intent = new Intent(FormLogin.this, FormTelaInicial.class);
                 startActivity(intent);
             }
         });

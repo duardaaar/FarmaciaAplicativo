@@ -7,26 +7,26 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:padding="16dp"
-    tools:context=".MissaoActivity">
+    tools:context=".CadastroClienteActivity">
 
     <!-- Logo da Farmácia -->
     <ImageView
         android:id="@+id/imageLogoFarmacia"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@drawable/missao"
+        android:src="@drawable/cliente"
         android:scaleType="centerCrop"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- Texto da Missão -->
+    <!-- Título -->
     <TextView
-        android:id="@+id/textMissao"
+        android:id="@+id/dados_cliente"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="CONHEÇA A NOSSA MISSÃO"
+        android:text="Dados do Cliente"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="@color/white"
@@ -42,25 +42,69 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/textMissao"
+        app:layout_constraintTop_toBottomOf="@+id/dados_cliente"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp" />
 
-    <!-- Missão para o Mundo -->
+    <!-- Nome do Cliente -->
     <TextView
-        android:id="@+id/textMissaoMundo"
+        android:id="@+id/nome_cliente_cadastro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/missao"
+        android:text="Nome: "
         android:textSize="18sp"
-        android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="center"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/divider"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Email do Cliente -->
+    <TextView
+        android:id="@+id/email_cliente_cadastro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Email: "
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/nome_cliente_cadastro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Telefone do Cliente -->
+    <TextView
+        android:id="@+id/telefone_cliente_cadastro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Telefone: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/email_cliente_cadastro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Número do Cartão do Cliente -->
+    <TextView
+        android:id="@+id/num_cartao_cliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Número do Cartão: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/telefone_cliente_cadastro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
         android:layout_marginHorizontal="16dp" />
 
     <!-- Botão de Voltar -->
@@ -74,10 +118,10 @@
         android:textColor="@color/white"
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/textMissaoMundo"
+        app:layout_constraintTop_toBottomOf="@+id/num_cartao_cliente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="40dp"
         android:layout_marginHorizontal="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

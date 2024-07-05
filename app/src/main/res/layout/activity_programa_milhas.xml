@@ -5,6 +5,131 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="16dp"
     tools:context=".ProgramaMilhasActivity">
+
+    <!-- Imagem Ilustrativa -->
+    <ImageView
+        android:id="@+id/imageIlustrativa"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/milha"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Texto Explicativo -->
+    <TextView
+        android:id="@+id/textExplicativo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Acumule 10 pontos a cada compra."
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/imageIlustrativa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp" />
+
+    <TextView
+        android:id="@+id/pontos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ao atingir 100 pontos, ganhe um produto grátis!"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/textExplicativo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Botão de Compra -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_compra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Realizar Uma Compra"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        style="@style/Button"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/pontos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Texto de Pontos Acumulados -->
+    <TextView
+        android:id="@+id/textPontosAcumulados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pontos acumulados:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/bt_compra"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- Valor dos Pontos Acumulados -->
+    <TextView
+        android:id="@+id/ValorPontos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/bt_compra"
+        app:layout_constraintStart_toEndOf="@+id/textPontosAcumulados"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- Barra de Progresso -->
+    <ProgressBar
+        android:id="@+id/progressBarPontos"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        android:max="100"
+        android:progressTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/ValorPontos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp" />
+
+    <!-- Botão de Resgatar Produto Grátis -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonResgatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resgatar Produto Grátis"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        style="@style/Button"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarPontos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,139 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="16dp"
     tools:context=".ClientesActivity">
+
+    <!-- CardView com Logo do Cliente -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLogoCliente"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="0dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp" >
+
+        <ImageView
+            android:id="@+id/imageLogoCliente"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/person"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Nome do Cliente -->
+    <TextView
+        android:id="@+id/textNomeCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do Cliente"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/cardLogoCliente"
+        app:layout_constraintTop_toTopOf="@+id/cardLogoCliente"
+        android:layout_marginStart="16dp" />
+
+    <!-- Nacionalidade do Cliente -->
+    <TextView
+        android:id="@+id/textNacionalidadeCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nacionalidade"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/cardLogoCliente"
+        app:layout_constraintTop_toBottomOf="@+id/textNomeCliente"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- Favoritos -->
+    <TextView
+        android:id="@+id/textFavoritos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Favoritos"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNacionalidadeCliente"
+        android:drawableStart="@drawable/baseline_favorite_24"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="30dp" />
+
+    <!-- Carrinho -->
+    <TextView
+        android:id="@+id/textCarrinho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carrinho"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFavoritos"
+        android:drawableStart="@drawable/baseline_shopping_cart_24"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Pagamento -->
+    <TextView
+        android:id="@+id/textPagamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pagamento"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCarrinho"
+        android:drawableStart="@drawable/baseline_payment_24"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Status do Pedido -->
+    <TextView
+        android:id="@+id/textStatusPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status do Pedido"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPagamento"
+        android:drawableStart="@drawable/baseline_assignment_24"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Central de Ajuda -->
+    <TextView
+        android:id="@+id/textCentralAjuda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Central de Ajuda"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textStatusPedido"
+        android:drawableStart="@drawable/baseline_help_24"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Histórico -->
+    <TextView
+        android:id="@+id/textHistorico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Histórico"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCentralAjuda"
+        android:drawableStart="@drawable/baseline_history_24"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="8dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

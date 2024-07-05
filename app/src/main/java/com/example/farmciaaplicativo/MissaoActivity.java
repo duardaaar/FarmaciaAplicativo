@@ -1,24 +1,34 @@
 package com.example.farmciaaplicativo;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MissaoActivity extends AppCompatActivity {
+
+    private View bt_voltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_missao);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        // Inicialize a tela de missão
+        IniciarTelaMissao();
+
+        // Configure o listener para o botão de voltar
+        bt_voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MissaoActivity.this, FormTelaInicial.class);
+                startActivity(intent);
+            }
         });
+    }
+
+    private void IniciarTelaMissao() {
+        bt_voltar = findViewById(R.id.bt_voltar);
     }
 }
