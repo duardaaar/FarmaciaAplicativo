@@ -7,7 +7,7 @@
     <Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_light" >
+        android:background="@color/purple_light">
 
         <ImageButton
             android:id="@+id/buttonDrawerToggle"
@@ -20,5 +20,114 @@
 
     </Toolbar>
 
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEJA BEM-VINDO"
+        android:textSize="40sp"
+        android:fontFamily="@font/palanquin_dark_semibold"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/purple_light"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"/>
 
+    <ImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logofarmacia"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Footer container -->
+    <LinearLayout
+        android:id="@+id/footerContainer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/footer_backgorund"
+        android:layout_marginTop="139dp"
+        android:padding="20dp"
+        android:layout_gravity="bottom">
+
+        <!-- Social media icons -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="15dp"
+                android:src="@drawable/logofacebook"
+                android:contentDescription="Facebook"
+                android:layout_margin="8dp"/>
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="15dp"
+                android:src="@drawable/xlogo"
+                android:contentDescription="Twitter"
+                android:layout_margin="8dp"/>
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="15dp"
+                android:src="@drawable/iglogo"
+                android:contentDescription="LinkedIn"
+                android:layout_margin="8dp"/>
+
+        </LinearLayout>
+
+        <!-- Navigation links -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="@android:color/white"
+                android:layout_margin="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sobre"
+                android:textColor="@android:color/white"
+                android:layout_margin="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Serviços"
+                android:textColor="@android:color/white"
+                android:layout_margin="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contato"
+                android:textColor="@android:color/white"
+                android:layout_margin="8dp"/>
+        </LinearLayout>
+
+        <!-- Copyright text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© 2023 All rights reserved"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
 </LinearLayout>
